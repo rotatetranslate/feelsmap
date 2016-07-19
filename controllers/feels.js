@@ -4,7 +4,7 @@ var Feel = require('../models/feel');
 var feelIndex = function(req, res) {
   Feel.find({}, function(err, feels) {
     if (err) {res.send(err)}
-    res.json(fishes);
+    res.json(feels);
   });
 };
 
@@ -14,7 +14,7 @@ var feelCreate = function(req, res) {
 
   feel.lat         = req.body.lat;
   feel.lng         = req.body.lng;
-  feel.type        = req.body.type;
+  feel.feel        = req.body.feel;
   feel.description = req.body.description
 
   feel.save(function(err, savedFeel) {
