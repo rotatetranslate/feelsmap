@@ -1,5 +1,5 @@
-var mongoose = require('mongoose'),
-    User     = require('./user.js');
+var mongoose = require('mongoose');
+var User     = require('./user.js');
 
 var feelSchema = new mongoose.Schema({
   lat: {type: String, required: true},
@@ -16,8 +16,8 @@ var feelSchema = new mongoose.Schema({
           'in love'
          ]
        },
-  description: String,
-  user: {type: mongoose.Schema.Types.ObjectId, ref: 'User'}
+  user: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
+  description: String
 });
 
 var Feel = mongoose.model('Feel', feelSchema);
