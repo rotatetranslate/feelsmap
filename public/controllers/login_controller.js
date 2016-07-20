@@ -18,11 +18,10 @@
     vm.loginData;
 
     function login() {
-      console.log('hello');
       authService.login(vm.username, vm.password)
         .then(function(res) {
           $log.log(res.data);
-          $state.go('home');
+          $state.go('heatMap');
         });
     };
 

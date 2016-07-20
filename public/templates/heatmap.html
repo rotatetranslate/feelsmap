@@ -1,11 +1,8 @@
-<nav>
-  <div class="nav-wrapper light-blue accent-1">
-    <a ui-sref="homePage" class="brand-logo center">F E E L S M A P</a>
-    <ul id="nav-mobile" class="right">
-      <li><a ui-sref="userPage"><i class="material-icons">person</i></a></li>
-    </ul>
-    <ul id="nav-mobile" class="left">
-      <li><a ui-sref="homePage"><i class="material-icons">explore</i></a></li>
-    </ul>
+<!-- move api key to env!!! -->
+<script src=`https://maps.googleapis.com/maps/api/js?key=${AIzaSyBdd9Ao-L15MRNxb8xNt8sbvMsTGTRfwLA}&callback=initMap`></script>
+
+<div class="container" ng-controller="HeatMapController as vm">
+  <div id="map">
+
   </div>
-</nav>
+</div>

@@ -1,7 +1,23 @@
-.container {
-  border: 1px solid black;
+body {
+  animation: fade 10s linear infinite;
 }
 
-div.login {
-  margin: 0px auto;
+@keyframes fade {
+  0% {
+    background-color: #49a09d;
+  }
+  50% {
+    background-color: #F3A183;
+  }
+  100% {
+    background-color: #49a09d;
+  }
+}
+
+.container {
+  margin-top: 50px;
+}
+
+a.login-button {
+  border-radius: 50px;
 }
