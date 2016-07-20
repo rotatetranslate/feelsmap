@@ -22,7 +22,6 @@ var login = function (req, res, next) {
   User.findOne({
       userName: req.body.username
     }).exec(function(err, user) {
-      console.log(user);
 
       if (err) throw err;
 
