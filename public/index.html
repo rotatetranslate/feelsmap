@@ -6,20 +6,24 @@
   <title>F E E L S M A P</title>
 
   <link rel="stylesheet" href="./assets/css/main.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
 
 </head>
 
+<!-- ng-controller="MainController" -->
 <body>
 
   <main ui-view></main>
 
   <script src="./app.module.js"></script>
   <script src="./app.routes.js"></script>
+  <script src="./services/auth.service.js"></script>
+  <script src="./services/user.dataservice.js"></script>
+  <script src="./controllers/login_controller.js"></script>
 </body>
 </html>

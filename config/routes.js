@@ -15,5 +15,6 @@ router.get('/users/:id', usersController.show);
 router.get('/feels',  feelsController.feelIndex);
 router.post('/feels', feelsController.feelCreate);
 
+router.post('/login', usersController.login);
 
 module.exports = router;
