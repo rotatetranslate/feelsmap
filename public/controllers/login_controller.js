@@ -21,7 +21,7 @@
       authService.login(vm.username, vm.password)
         .then(function(res) {
           $log.log(res.data);
-          $state.go('heatMap');
+          $state.go('map');
         });
     };
 

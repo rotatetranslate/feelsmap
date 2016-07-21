@@ -2,19 +2,22 @@
   'use strict';
 
   angular.module('app')
-    .controller('HeatMapController', HeatMapController);
+    .controller('MapController', MapController);
 
-  HeatMapController.$inject = ['userDataService'];
+  MapController.$inject = ['userDataService', '$http', 'mapLocsService'];
 
-  function HeatMapController(userDataService) {
+  function MapController(userDataService, $http, mapLocsService) {
     var vm = this;
+
+    vm.getFeels = mapLocsService.getFeels;
+    vm.getLocs  = mapLocsService.getLocs;
 
     initMap();
 
     function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -34.397, lng: 150.644},
-          zoom: 6
+          center: {lat: 34.0312450, lng: -118.2665320},
+          zoom: 14
         });
         var infoWindow = new google.maps.InfoWindow({map: map});
 
@@ -46,6 +49,11 @@
                               'Error: Your browser doesn\'t support geolocation.');
       }
 
+      // var marker = new google.maps.Marker({
+      //     position: myLatLng,
+      //     map: map,
+      //     title: 'Hello World!'
+      //   });
   }
 
 

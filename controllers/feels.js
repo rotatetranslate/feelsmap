@@ -12,7 +12,6 @@ var feelIndex = function(req, res) {
 var feelCreate = function(req, res) {
   var feel = new Feel();
 
-
   feel.user        = req.body.user;
   feel.latLng      = req.body.latLng;
   feel.feel        = req.body.feel;
@@ -24,6 +23,8 @@ var feelCreate = function(req, res) {
     res.json(savedFeel);
   });
 };
+
+
 
 module.exports = {
   feelIndex:  feelIndex,

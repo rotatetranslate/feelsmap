@@ -59,7 +59,7 @@
       var token = authToken.getToken().split('.')[1];
       var user = JSON.parse($window.atob(token));
       userDataService.user = user.user;
-      console.log(userDataService.user);
+      // console.log(userDataService.user);
       return user;
     };
 

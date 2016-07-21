@@ -42,7 +42,7 @@ UserSchema.methods.comparePassword = function(password) {
 
 // Access user's fishes
 UserSchema.methods.feels = function(callback) {
-  Feel.find({user: this._id}, function(err, feels) {
+  mongoose.model('Feel').find({user: this._id}, function(err, feels) {
     callback(err, feels);
   });
 };

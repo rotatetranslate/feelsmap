@@ -39,6 +39,7 @@
       vm.newFeel.latLng = userDataService.user.latLng;
       $http.post('/api/feels', vm.newFeel)
         .then(function(res) {
+          $state.go('map');
         });
     }
 
