@@ -12,9 +12,9 @@ var feelIndex = function(req, res) {
 var feelCreate = function(req, res) {
   var feel = new Feel();
 
+
   feel.user        = req.body.user;
-  feel.lat         = req.body.lat;
-  feel.lng         = req.body.lng;
+  feel.latLng      = req.body.latLng;
   feel.feel        = req.body.feel;
   feel.description = req.body.description
 

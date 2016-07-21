@@ -33,22 +33,19 @@ Feel.remove({}, function(err) {
       // create feels
       var feels = [
         { // 0
-          lat: '34.0312450',
-          lng: '-118.2665320',
+          latLng: [34.0312450, -118.2665320],
           feel: 'stressed',
           description: 'working on my final project feeling v stressed',
           user: users[0]._id
         },
           { // 1
-          lat: '34.0234558',
-          lng: '-118.2655020',
+          latLng: [34.0234558, -118.2655020],
           feel: 'annoyed',
           description: 'im not even a real person',
           user: users[1]._id
         },
           { // 2
-          lat: '34.0227089',
-          lng: '-118.2870026',
+          latLng: [34.0227089, -118.2870026],
           feel: 'relaxed',
           user: users[2]._id
         }

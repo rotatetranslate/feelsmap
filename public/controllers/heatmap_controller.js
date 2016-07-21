@@ -4,13 +4,12 @@
   angular.module('app')
     .controller('HeatMapController', HeatMapController);
 
-  HeatMapController.$inject = [];
+  HeatMapController.$inject = ['userDataService'];
 
-  function HeatMapController() {
+  function HeatMapController(userDataService) {
     var vm = this;
 
-    /////// test //////
-    vm.initMap = initMap;
+    initMap();
 
     function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
@@ -26,6 +25,7 @@
               lat: position.coords.latitude,
               lng: position.coords.longitude
             };
+            userDataService.user.latLng = [pos.lat, pos.lng];
 
             infoWindow.setPosition(pos);
             infoWindow.setContent('Location found.');
@@ -47,6 +47,6 @@
       }
 
   }
- /////////////////////////////
+
 
 })();

@@ -27,7 +27,9 @@
 
       .state('heatMap', { // inject feelsDataService
         url: '/heatmap',
-        templateUrl: '/templates/heatmap.html'
+        templateUrl: '/templates/heatmap.html',
+        controller: 'HeatMapController',
+        controllerAs: 'vm'
       })
 
       .state('user', { // inject feelsDataService
@@ -36,7 +38,7 @@
       })
 
       .state('addFeel', {
-        url: '/feel',
+        // url: '/feel',
         templateUrl: '/templates/addfeel.html',
         controller: 'FeelsController',
         controllerAs: 'vm'
