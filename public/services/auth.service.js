@@ -58,8 +58,8 @@
     authFactory.setUser = function() {
       var token = authToken.getToken().split('.')[1];
       var user = JSON.parse($window.atob(token));
-      userDataService.user = user;
-      console.log(userDataService);
+      userDataService.user = user.user;
+      console.log(userDataService.user);
       return user;
     };
 
