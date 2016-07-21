@@ -11,7 +11,10 @@ var show = function(req, res, next){
     } else if (!user) {
       res.json({message: 'No user with this id.'});
     } else {
-      res.json(user);
+      user.feels(function(err, feels) {
+        if (err) res.json(err);
+        res.json({user: user, feels: feels})
+      });
     }
   });
 };

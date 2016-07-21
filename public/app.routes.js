@@ -25,18 +25,22 @@
         templateUrl: '/templates/register.html'
       })
 
-      .state('heatMap', { // inject feelsDataService
-        url: '/heatmap',
-        templateUrl: '/templates/heatmap.html'
+      .state('map', { // inject feelsDataService
+        url: '/map',
+        templateUrl: '/templates/map.html',
+        controller: 'MapController',
+        controllerAs: 'vm'
       })
 
       .state('user', { // inject feelsDataService
         url: '/user',
-        templateUrl: '/templates/user.html'
+        templateUrl: '/templates/user.html',
+        controller: 'ProfileController',
+        controllerAs: 'vm'
       })
 
       .state('addFeel', {
-        url: '/feel',
+        // url: '/feel',
         templateUrl: '/templates/addfeel.html',
         controller: 'FeelsController',
         controllerAs: 'vm'

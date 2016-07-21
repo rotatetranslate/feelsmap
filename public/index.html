@@ -13,6 +13,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.1.9/angular-materialize.min.js"></script>
+  <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdd9Ao-L15MRNxb8xNt8sbvMsTGTRfwLA"></script>
 
 </head>
 
@@ -25,7 +26,7 @@
       <li ng-show="vm.isLoggedIn()"><a ui-sref="user"><i class="material-icons">person</i></a></li>
     </ul>
     <ul id="nav-mobile" class="left">
-      <li ng-show="vm.isLoggedIn()"><a ui-sref="heatMap"><i class="material-icons">explore</i></a></li>
+      <li ng-show="vm.isLoggedIn()"><a ui-sref="map"><i class="material-icons">explore</i></a></li>
     </ul>
   </div>
 </nav>
@@ -38,7 +39,9 @@
   <script src="./services/user.dataservice.js"></script>
   <script src="./controllers/login_controller.js"></script>
   <script src="./controllers/main_controller.js"></script>
-  <script src="./controllers/heatmap_controller.js"></script>
+  <script src="./controllers/map_controller.js"></script>
+  <script src="./services/mapLocs.service.js"></script>
   <script src="./controllers/feels_controller.js"></script>
+  <script src="./controllers/profile_controller.js"></script>
 </body>
 </html>

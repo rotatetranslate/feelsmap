@@ -2,8 +2,7 @@ var mongoose = require('mongoose');
 var User     = require('./user.js');
 
 var feelSchema = new mongoose.Schema({
-  lat: {type: String}, // required: true
-  lng: {type: String}, // required: true
+  latLng: {type: [Number], index: '2d'},
   feel: {type: String, required: true,
          enum: [
           'stressed',
