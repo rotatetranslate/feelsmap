@@ -10,7 +10,7 @@
           <p>Explore how your surroundings impact other users' moods. Contribute by adding your favorite places to relax or avoid.</p>
         </div>
         <div class="card-action">
-          <a ui-sref="login" class="waves-effect waves-light btn-large login-button">L O G I N</a>
+          <a ng-hide="vm.isLoggedIn()" ui-sref="login" class="waves-effect waves-light btn-large login-button">L O G I N</a>
         </div>
       </div>
     </div>
