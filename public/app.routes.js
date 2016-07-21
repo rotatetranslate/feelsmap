@@ -37,7 +37,9 @@
 
       .state('addFeel', {
         url: '/feel',
-        templateUrl: '/templates/addfeel.html'
+        templateUrl: '/templates/addfeel.html',
+        controller: 'FeelsController',
+        controllerAs: 'vm'
       })
 
       // service for geolocation data
