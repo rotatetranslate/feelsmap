@@ -1,5 +1,5 @@
 body {
-  animation: fade 10s linear infinite;
+  animation: fade 12s linear infinite;
 }
 
 @keyframes fade {
@@ -20,4 +20,9 @@ body {
 
 a.login-button {
   border-radius: 50px;
+}
+
+#addFeelBtn {
+  border-radius: 50px;
+  margin-bottom: 20px;
 }

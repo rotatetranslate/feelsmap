@@ -7,11 +7,12 @@
 
   <link rel="stylesheet" href="./assets/css/main.css">
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.1.9/angular-materialize.min.js"></script>
 
 </head>
 
@@ -24,7 +25,7 @@
       <li ng-show="vm.isLoggedIn()"><a ui-sref="login"><i class="material-icons">person</i></a></li>
     </ul>
     <ul id="nav-mobile" class="left">
-      <li ng-show="vm.isLoggedIn()"><a ui-sref="login"><i class="material-icons">explore</i></a></li>
+      <li ng-show="vm.isLoggedIn()"><a ui-sref="heatMap"><i class="material-icons">explore</i></a></li>
     </ul>
   </div>
 </nav>
@@ -37,5 +38,7 @@
   <script src="./services/user.dataservice.js"></script>
   <script src="./controllers/login_controller.js"></script>
   <script src="./controllers/main_controller.js"></script>
+  <script src="./controllers/heatmap_controller.js"></script>
+  <script src="./controllers/feels_controller.js"></script>
 </body>
 </html>
