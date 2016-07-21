@@ -2,8 +2,8 @@ var mongoose = require('mongoose');
 var User     = require('./user.js');
 
 var feelSchema = new mongoose.Schema({
-  lat: {type: String, required: true},
-  lng: {type: String, required: true},
+  lat: {type: String}, // required: true
+  lng: {type: String}, // required: true
   feel: {type: String, required: true,
          enum: [
           'stressed',

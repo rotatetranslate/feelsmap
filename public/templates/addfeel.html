@@ -1,36 +1,25 @@
 <div class="container blue-grey darken-1 white-text">
-<!--
-  <div class="row">
 
-    <div input-field col s5 m5>
-        <select class="" material-select>
-            <option ng-repeat="feel in vm.feels">{{ feel }}</option>
-        </select>
-    </div>
+  <div class="container feel-container" ng-click="vm.dubTF()">
+    <form class="col s12 center-align" id="submitFeel" ng-submit="vm.addFeel()">
 
-  </div> -->
-
-  <div class="container">
-
-    <div class="row">
-      <div class="input-field col s12">
-        <select id="feel" ng-model="selectedFeel" material-select watch>
-                <option ng-repeat="feel in vm.feels">{{ feel }}</option>
-        </select>
-        <label for="feel">FEEL</label>
-      </div>
-    </div>
-
-    <div class="row">
-      <form class="col s12">
-        <div class="row">
-          <div class="input-field col s12">
-            <textarea id="textarea1" class="materialize-textarea"></textarea>
-            <label for="textarea1">Description</label>
-          </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <select id="feel" ng-model="vm.newFeel.feel" material-select>
+                  <option ng-repeat="feel in vm.feels">{{ feel }}</option>
+          </select>
+          <label for="feel">FEEL</label>
         </div>
-      </form>
-    </div>
+      </div>
 
+      <div class="row">
+        <div input-field>
+          <textarea ng-model="vm.newFeel.description" class="materialize-textarea"></textarea>
+          <label>Description</label>
+        </div>
+      </div>
+      <button class="waves-effect waves-light btn-large" id="feel-btn">SUBMIT FEEL</button>
+    </form>
   </div>
+
 </div>

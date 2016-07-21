@@ -14,8 +14,12 @@ body {
   }
 }
 
-.container {
+div.container {
   margin-top: 50px;
+}
+
+div.container.feel-container {
+  padding-top: 20px;
 }
 
 a.login-button {
@@ -26,3 +30,10 @@ a.login-button {
   border-radius: 50px;
   margin-bottom: 20px;
 }
+
+#feel-btn {
+  border-radius: 50px;
+  margin-bottom: 20px;
+}
+
+
