@@ -10,9 +10,24 @@
     var vm = this;
 
     vm.getFeels = mapLocsService.getFeels;
-    vm.getLocs  = mapLocsService.getLocs;
+    var organizedFeels;
+    mapLocsService.getLocs().then(function(data) {
+      organizedFeels = data;
+      // console.log('organized feels', organizedFeels);
+    }).then(function() {
+      initMap();
+    }).then(function() {
+      // console.log(Object.keys(organizedFeels))
+      Object.keys(organizedFeels).forEach(function(feel) {
+        return organizedFeels[feel].forEach(function(feelLoc) {
+          var marker = new google.maps.Marker({
+              position: {lat: feelLoc[0], lng:feelLoc[1]},
+              map: map,
+            });
+        })
+      })
+    })
 
-    initMap();
 
     function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
@@ -49,11 +64,14 @@
                               'Error: Your browser doesn\'t support geolocation.');
       }
 
-      // var marker = new google.maps.Marker({
-      //     position: myLatLng,
-      //     map: map,
-      //     title: 'Hello World!'
-      //   });
+      // Object.keys(organizedFeels).forEach(function(feel) {
+      //   return feel.forEach(function(feelLoc) {
+      //     var marker = new google.maps.Marker({
+      //         position: {lat: feelLoc[0], lng:feelLoc[1]},
+      //         map: map,
+      //       });
+      //   })
+      // })
   }
 
 
