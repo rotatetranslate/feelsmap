@@ -26,7 +26,7 @@
         res.data.forEach(function(datum) {
           datum.feel in feelsLocs ? feelsLocs[datum.feel].push(datum.latLng) : feelsLocs[datum.feel] = [datum.latLng];
         });
-        console.log(feelsLocs);
+        // console.log(feelsLocs);
         return feelsLocs;
       });
     }

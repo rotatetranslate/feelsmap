@@ -43,4 +43,8 @@ a.login-button {
   border: 1px solid black;
 }
 
+.page-footer {
+  margin-bottom: -50px;
+}
+
 
