@@ -31,7 +31,7 @@ Deployed on [heroku](https://limitless-harbor-67340.herokuapp.com/).
 [trello](https://trello.com/b/gG3qeyUY/feels-map-app) (with wireframes).
 
 ##Next Steps
-Feels Map is still in development and the following will be 
+Feels Map is still in development and the following will be implemented.
  
 * Make fully functional: register, logout, reset forgotten password
 * Add pins to map
